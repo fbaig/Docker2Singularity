@@ -13,7 +13,7 @@ cd ..
 echo "Creating docker image tarbal: $IMAGE_NAME.tar"
 EXPORT_IMAGE_ID=$(docker images -q $IMAGE_NAME)
 echo $EXPORT_IMAGE_ID
-#docker save $EXPORT_IMAGE_ID -o $IMAGE_NAME.tar
+docker save $EXPORT_IMAGE_ID -o $IMAGE_NAME.tar
 
 command_status=$?
 if [ $command_status -eq 0 ]; then
